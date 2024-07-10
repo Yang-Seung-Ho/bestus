@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Drawing Accuracy</title>
+</head>
+<body>
+    <h1>Circle Drawing Accuracy</h1>
+    <div>
+        <img src="{{ url_for('video_feed') }}" alt="Video Feed">
+    </div>
+    <form action="{{ url_for('result') }}" method="post">
+        <input type="hidden" name="accuracy" id="accuracy">
+        <button type="submit">Submit Result</button>
+    </form>
+</body>
+<script>
+    // JavaScript to capture the accuracy from the video feed and set it to the hidden input field
+    document.getElementById('accuracy').value = 55.2;// Set accuracy value from the video feed;
+</script>
+</html>
